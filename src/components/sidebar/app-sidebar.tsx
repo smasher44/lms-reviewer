@@ -10,7 +10,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip"
 
-
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 import {
   Sidebar,
@@ -66,7 +66,7 @@ export function AppSidebar() {
   return (
     <Sidebar collapsible="icon" className="bg-white" style={{ backgroundColor: '#fff' }}> 
       <SidebarHeader className="flex flex-row items-center">
-        <HomeLogo/>
+          <img src="./src/assets/sample.png"/>
           <h1 className={`text-black origin-left font-medium text-xl duration-200 ${currenState() ? "scale-0" : ""}`}>
             BlazingEdge
           </h1>
