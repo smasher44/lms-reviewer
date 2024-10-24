@@ -66,7 +66,7 @@ export function AppSidebar() {
   return (
     <Sidebar collapsible="icon" className="bg-white" style={{ backgroundColor: '#fff' }}> 
       <SidebarHeader className="flex flex-row items-center">
-        <HomeLogo props={currenState()}/>
+        <HomeLogo/>
           <h1 className={`text-black origin-left font-medium text-xl duration-200 ${currenState() ? "scale-0" : ""}`}>
             BlazingEdge
           </h1>

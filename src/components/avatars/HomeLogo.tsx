@@ -1,12 +1,10 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
-
-const HomeLogo = ({ props }) => {
-  console.log("🚀 ~ HomeLogo ~ props:", props)
+const HomeLogo = () => {
 
   return (
     <Avatar className={`cursor-pointer rounded-none pr-[5px]`}>
-      <AvatarImage src="./src/assets/sample.png" />
+      <AvatarImage src="./src/assets/sample.png" alt="@shadcn"/>
       <AvatarFallback>BE</AvatarFallback>
     </Avatar>
   )

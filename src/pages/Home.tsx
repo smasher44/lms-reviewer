@@ -1,4 +1,6 @@
 import Layout from "@/components/containers/layout";
+import { Button } from "@/components/ui/button"
+import { Link } from "react-router-dom";
 
 function App() {
 
@@ -8,6 +10,9 @@ function App() {
       <div>
         <p>Edit src/App.tsx and save to test HMR</p>
       </div>
+      <Link to="/testpage">
+        <Button variant="default">TestPage</Button>
+      </Link>
     </Layout>
   )
 }
