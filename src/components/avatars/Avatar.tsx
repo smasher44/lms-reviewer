@@ -5,7 +5,7 @@ const AvatarSample = () => {
 
   return (
     <Avatar >
-      <AvatarImage src="./src/assets/" />
+      <AvatarImage src="./src/assets" />
       <AvatarFallback>GE</AvatarFallback>
     </Avatar>
   )

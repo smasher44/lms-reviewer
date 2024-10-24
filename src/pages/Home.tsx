@@ -11,7 +11,7 @@ function App() {
         <p>Edit src/App.tsx and save to test HMR</p>
       </div>
       <Link to="/testpage">
-        <Button variant="default">TestPage</Button>
+        <Button variant="link">TestPage</Button>
       </Link>
     </Layout>
   )
