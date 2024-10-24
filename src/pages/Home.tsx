@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button"
 import Layout from "@/components/containers/layout";
 
 function App() {

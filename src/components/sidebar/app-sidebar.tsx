@@ -1,6 +1,16 @@
 import { Calendar, Home, Inbox, Search, Settings } from "lucide-react"
 import { useSidebar } from "@/components/ui/sidebar"
 import HomeLogo from "../avatars/HomeLogo"
+import { Separator } from "@/components/ui/separator"
+
+
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
+
+
 
 import {
   Sidebar,
@@ -13,6 +23,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
+
 
 // Menu items.
 const items = [
@@ -53,26 +64,44 @@ export function AppSidebar() {
   }
 
   return (
-    <Sidebar collapsible="icon">
+    <Sidebar collapsible="icon" className="bg-white" style={{ backgroundColor: '#fff' }}> 
       <SidebarHeader className="flex flex-row items-center">
         <HomeLogo props={currenState()}/>
           <h1 className={`text-black origin-left font-medium text-xl duration-200 ${currenState() ? "scale-0" : ""}`}>
             BlazingEdge
           </h1>
       </SidebarHeader>
+      
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel className="text-black font-medium">Menu</SidebarGroupLabel>
+          <SidebarGroupLabel className="font-medium text-base">Menu</SidebarGroupLabel>
+          <Separator />
           <SidebarGroupContent>
-            <SidebarMenu>
+          <SidebarMenu>
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild>
-                    <a href={item.url}>
-                      <item.icon size={30}/>
-                      <p style={{ fontSize: "15px" }}>{item.title}</p>
-                    </a>
-                </SidebarMenuButton>
+                  {state === "collapsed" ? (
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <SidebarMenuButton asChild>
+                          <a href={item.url}>
+                            <item.icon className="w-8 h-8" />
+                            <p className="leading-7 text-base">{item.title}</p>
+                          </a>
+                        </SidebarMenuButton>
+                      </TooltipTrigger>
+                      <TooltipContent side="right">
+                        <p>{item.title}</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  ) : (
+                    <SidebarMenuButton asChild>
+                      <a href={item.url}>
+                        <item.icon className="w-8 h-8" />
+                        <p className="leading-7 text-base">{item.title}</p>
+                      </a>
+                    </SidebarMenuButton>
+                  )}
                 </SidebarMenuItem>
               ))}
             </SidebarMenu>

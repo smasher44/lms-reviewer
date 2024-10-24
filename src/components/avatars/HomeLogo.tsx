@@ -9,7 +9,6 @@ const HomeLogo = ({ props }) => {
       <AvatarImage src="./src/assets/sample.png" />
       <AvatarFallback>BE</AvatarFallback>
     </Avatar>
-
   )
 }
 
