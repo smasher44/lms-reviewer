@@ -4,7 +4,7 @@ const HomeLogo = () => {
 
   return (
     <Avatar className={`cursor-pointer rounded-none pr-[5px]`}>
-      <AvatarImage src="./src/assets/logo.png" alt="@shadcn"/>
+      <AvatarImage src="public/assets/sample.png" alt="@shadcn"/>
       <AvatarFallback>BE</AvatarFallback>
     </Avatar>
   )
